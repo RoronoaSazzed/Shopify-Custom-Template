@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <title>Announcement</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .announement-bar {
+        width: 100%;
+        background-color: #201d1d;
+        color: white;
+        position: relative;
+        min-height: 50px;
+        overflow: hidden;
+      }
+
+      .ann {
+        text-align: center;
+        font-family: "Tilt Neon", cursive;
+        position: absolute;
+        width: 100%;
+      }
+
+      .ann-1 {
+        animation: announcement1 6s ease-in-out infinite;
+      }
+
+      @keyframes announcement1 {
+        0% {
+          opacity: 1;
+          top: 50%;
+          left: 150vw;
+          transform: translate(-50%, -50%);
+        }
+
+        10%,
+        40% {
+          opacity: 1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        50% {
+          opacity: 1;
+          top: 50%;
+          left: -50vw;
+          transform: translate(-50%, -50%);
+        }
+
+        55% {
+          opacity: 0;
+          top: 50%;
+          left: -100%;
+          transform: translate(-50%, -50%);
+        }
+
+        60%,
+        100% {
+          opacity: 0;
+          top: 50%;
+          left: 100%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .ann-2 {
+        animation: announcement2 6s ease-in-out infinite;
+      }
+
+      @keyframes announcement2 {
+        0% {
+          opacity: 0;
+          top: 50%;
+          left: 150vw;
+          transform: translate(-50%, -50%);
+        }
+
+        5%,
+        50% {
+          opacity: 1;
+          top: 50%;
+          left: 150vw;
+          transform: translate(-50%, -50%);
+        }
+
+        60%,
+        90% {
+          opacity: 1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        100% {
+          opacity: 1;
+          top: 50%;
+          left: -50vw;
+          transform: translate(-50%, -50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="announement-bar">
+        <p class="ann ann-1">Goodhair starts here!</p>
+        <p class="ann ann-2">Bestel vandaag en ontvang gratis verzending.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitamins Section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .vitamins__section {
+        width: 100%;
+        max-width: 1080px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .vitamins__items {
+        padding: 15px;
+        flex: 1;
+        text-align: center;
+      }
+
+      .vitamins__items img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 150px;
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .vitamins__section {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="vitamins__section">
+        <div class="vitamins__items">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/carrot.png?v=1677325487"
+            alt=""
+          />
+          <h3>Vitamin A</h3>
+        </div>
+        <div class="vitamins__items">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/Broccoli.png?v=1677325487"
+            alt=""
+          />
+          <h3>Vitamin C</h3>
+        </div>
+        <div class="vitamins__items">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/Walnut.png?v=1677325487"
+            alt=""
+          />
+          <h3>Vitamin B1</h3>
+        </div>
+        <div class="vitamins__items">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/cauliflower.png?v=1677325487"
+            alt=""
+          />
+          <h3>Vitamin B2</h3>
+        </div>
+        <div class="vitamins__items">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/orange.png?v=1677325487"
+            alt=""
+          />
+          <h3>Vitamin B3</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

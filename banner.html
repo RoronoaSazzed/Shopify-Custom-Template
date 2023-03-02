@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Banner</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .banner__wrapper {
+        width: 100%;
+        background-color: #fff3f3;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0px;
+      }
+
+      .sign__two,
+      .sign__three {
+        flex-basis: 20%;
+        padding: 20px;
+      }
+
+      .text2,
+      .text3 {
+        color: #ffdcdd;
+        font-size: 100px;
+        position: relative;
+      }
+
+      .sign__two img,
+      .sign__three img {
+        width: 100%;
+        max-width: 150px;
+        position: absolute;
+        right: 0;
+        bottom: 0%;
+      }
+
+      .text__block {
+        text-align: center;
+        flex-basis: 60%;
+        padding: 20px;
+      }
+
+      .banner__button {
+        margin-top: 25px;
+        display: inline-block;
+        width: auto;
+        text-decoration: none;
+        color: white;
+        background-color: #ff7f87;
+        padding: 15px 25px;
+        transition: 0.3s;
+      }
+
+      .banner__button:hover {
+        background-color: #64c152;
+      }
+
+      .text__block h1 {
+        font-weight: 300;
+        color: #ff7f87;
+        text-transform: uppercase;
+        font-size: 50px;
+      }
+
+      .text__block h3 {
+        font-size: 22px;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .banner__wrapper {
+          flex-wrap: wrap;
+        }
+
+        .text__block {
+          order: -1;
+          flex-basis: 100%;
+        }
+
+        .sign__two,
+        .sign__three {
+          flex-basis: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner__wrapper">
+      <div class="sign__two">
+        <div class="text2">
+          <h1>2</h1>
+          <img src="2.png" alt="" />
+        </div>
+      </div>
+
+      <div class="text__block">
+        <h1>stel uw<br /><b>duo of trio pakket</b></h1>
+
+        <h3>
+          -20% automatische korting bij aankoop van 2 of 3 flessen naar keuze!
+        </h3>
+
+        <a class="banner__button" href="#">IK STEL MIJN PAK SAMEN</a>
+      </div>
+
+      <div class="sign__three">
+        <div class="text3">
+          <h1>3</h1>
+          <img src="3.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

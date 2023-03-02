@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="tab.css" />
+    <link rel="stylesheet" href="accordion.css" />
+    
+    <style>
+
+         /* Tab CSS */
+
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.text-pink {
+  color: #ff7f87;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.tab-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 127, 135, 0.5);
+}
+
+.tab-list::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  background-color: #ff7f87;
+  transition: 0.3s;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  transition: 0.3s;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.tab-toggle {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+  font-weight: 300;
+  animation: slideaway 200ms;
+  display: none;
+}
+
+.tab-toggle:nth-child(1):checked ~ .tab-list .tab-item:nth-child(1),
+.tab-toggle:nth-child(2):checked ~ .tab-list .tab-item:nth-child(2),
+.tab-toggle:nth-child(3):checked ~ .tab-list .tab-item:nth-child(3),
+.tab-toggle:nth-child(4):checked ~ .tab-list .tab-item:nth-child(4) {
+  font-weight: 500;
+}
+
+.tab-toggle:nth-child(2):checked ~ .tab-list::before {
+  transform: translateX(100%);
+}
+
+.tab-toggle:nth-child(3):checked ~ .tab-list::before {
+  transform: translateX(200%);
+}
+
+.tab-toggle:nth-child(4):checked ~ .tab-list::before {
+  transform: translateX(300%);
+}
+
+.tab-toggle:nth-child(1):checked ~ .tab-container .tab-content:nth-child(1),
+.tab-toggle:nth-child(2):checked ~ .tab-container .tab-content:nth-child(2),
+.tab-toggle:nth-child(3):checked ~ .tab-container .tab-content:nth-child(3),
+.tab-toggle:nth-child(4):checked ~ .tab-container .tab-content:nth-child(4) {
+  display: block;
+}
+
+.tab-trigger {
+  display: block;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.tab-container {
+  padding: 15px 30px;
+}
+
+@keyframes slideaway {
+  from {
+    display: block;
+  }
+  to {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+
+.tab-content ul{
+  list-style: none;
+}
+
+        /* The accordion functionality */
+:root {
+  --transitionLength: 0.4s;
+  --transitionTiming: ease;
+}
+
+.accordion-animation-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows var(--transitionLength) var(--transitionTiming);
+}
+
+.accordion-trigger-input:checked ~ .accordion-animation-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.accordion-animation {
+  min-height: 0;
+}
+
+.accordion-transform-wrapper {
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform var(--transitionLength) var(--transitionTiming),
+    visibility 0s var(--transitionLength) var(--transitionTiming);
+}
+
+.accordion-trigger-input:checked
+  ~ .accordion-animation-wrapper
+  .accordion-transform-wrapper {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform var(--transitionLength) var(--transitionTiming),
+    visibility 0s linear;
+}
+
+.accordion-content * {
+  margin: 0;
+}
+
+.accordion {
+  margin: 0 auto;
+  background: white;
+}
+
+.accordion-item {
+  margin-bottom: -2px;
+  overflow: hidden;
+}
+
+.accordion-trigger-input {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.accordion-trigger {
+  display: block;
+  position: relative;
+  padding: 16px;
+  transition: box-shadow var(--transitionLength) var(--transitionTiming);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.accordion-trigger-input:focus-visible ~ .accordion-trigger {
+  outline: 2px solid;
+  outline-offset: -2px;
+}
+
+.accordion-trigger::after {
+  display: block;
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 2px solid #676767;
+  border-bottom: transparent;
+  border-left: transparent;
+  transform: rotate(135deg);
+  transition: transform var(--transitionLength) var(--transitionTiming);
+}
+
+.accordion-trigger-input:checked ~ .accordion-trigger::after {
+  transform: rotate(135deg) rotateX(180deg) rotateY(180deg) translateY(4px)
+    translateX(-4px);
+}
+
+.accordion-trigger-input:checked ~ .accordion-trigger {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow calc(var(--transitionLength) / 4)
+    var(--transitionTiming);
+}
+
+.accordion-content {
+  padding: 16px;
+  background: #f8f8f8;
+}
+
+.accordion-content h2 {
+  padding-bottom: 0.75em;
+}
+
+.accordion-content p {
+  padding-bottom: 1.5em;
+}
+
+.accordion-content p:last-of-type {
+  padding-bottom: 0;
+}
+
+.accordion-content img {
+  max-width: 100%;
+}
+
+    @media only screen and (min-width: 768px) {
+      .on-pc {
+        display: block;
+      }
+      .on-mobile {
+        display: none;
+      }
+    }
+
+   
+
+    @media only screen and (max-width: 768px) {
+      .on-mobile {
+        display: block;
+      }
+      .on-pc {
+        display: none;
+      }
+    }
+
+    
+    
+    </style>
+  </head>
+  <body>
+      <div class="on-mobile container accordion">
+             <!-- Item 1 -->
+
+          <div class="accordion-item">
+            <input id="accordion-trigger-1" class="accordion-trigger-input" type="checkbox"></input>
+          <label class="accordion-trigger text-pink" for="accordion-trigger-1">BENEFITS
+            </label>
+            <section class="accordion-animation-wrapper">
+              <div class="accordion-animation">
+                <div class="accordion-transform-wrapper">
+                  <div class="accordion-content">
+                    Alles wat je nodig hebt om mooier en langer haar te krijgen, in één woord subliem!
+                    <ul>
+                      <li>
+                        ✓ Bevordert de groei en onderhoudt de conditie van het haar,
+                      </li>
+      
+                      <li>
+                        ✓ Bevordert de schoonheid en groei van het haar,
+                      </li>
+      
+                      <li>
+                        ✓ Helpt haarbreuk aanzienlijk te verminderen,
+                      </li>
+      
+                      <li>
+                        ✓ Helpt het aantal verdubbelde (gespleten) haren aanzienlijk te verminderen,
+                        Helpt het volume van het haar aanzienlijk te verbeteren,
+                        
+                      </li>
+      
+                      <li>
+                        ✓ Helpt om normaal haar te behouden dankzij zink, Biotine en Keratine,
+                      </li>
+      
+                      <li>
+                        ✓ Geschikt voor alle haartypes.
+                      </li>
+                    </ul> 
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          
+          <!-- Item 2 -->
+
+          <div class="accordion-item">
+            <input id="accordion-trigger-2" class="accordion-trigger-input" type="checkbox"></input>
+          <label class="accordion-trigger text-pink" for="accordion-trigger-2">INGREDIENTEN
+            </label>
+            <section class="accordion-animation-wrapper">
+              <div class="accordion-animation">
+                <div class="accordion-transform-wrapper">
+                  <div class="accordion-content">
+                    Een unieke formule met essentiële vitaminen en mineralen voor uw haar:
+                    see the attachment photo sent separately:suplement facts.
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Item 3 -->
+
+
+          <div class="accordion-item">
+            <input id="accordion-trigger-3" class="accordion-trigger-input" type="checkbox"></input>
+          <label class="accordion-trigger text-pink" for="accordion-trigger-3">GEBRUIK
+            </label>
+            <section class="accordion-animation-wrapper">
+              <div class="accordion-animation">
+                <div class="accordion-transform-wrapper">
+                  <div class="accordion-content">
+                    Neem 2 gummies per dag wanneer je maar wilt. Genoeg voor 30 dagen  (flesje van 1 maand). Er zijn 60 gummies per flesje. De haar vitamine kan resultaten geven vanaf de eerste maand. Voor langdurige resultaten raden wij minimaal 3 maanden gebruiken aan. Resultaten zullen verschillen van persoon tot persoon.
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Item 4 -->
+
+
+          <div class="accordion-item">
+            <input id="accordion-trigger-4" class="accordion-trigger-input" type="checkbox"></input>
+          <label class="accordion-trigger text-pink" for="accordion-trigger-4">VOORZORGSMAATREGELEN VOOR GEBRUIK
+            </label>
+            <section class="accordion-animation-wrapper">
+              <div class="accordion-animation">
+                <div class="accordion-transform-wrapper">
+                  <div class="accordion-content">
+                    Zwangere vrouwen, vrouwen die zwanger willen worden of vrouwen die borstvoeding geven dienen hun arts, verloskundige of apotheker te raadplegen alvorens dit voedingssupplement in te nemen. Niet aanbevolen voor kinderen jonger dan 12 jaar of voor mensen met schildklieraandoeningen. Voedingssupplementen dienen te worden gebruikt als onderdeel van een gezonde levensstijl en niet als vervanging van een gevarieerde en evenwichtige voeding. Bewaren bij kamertemperatuur op een schone en droge plaats. Buiten het bereik van jonge kinderen houden. De aanbevolen dagelijkse dosis niet overschrijden.
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+    <div class="on-pc container">
+      <div class="box">
+        <input
+          type="radio"
+          class="tab-toggle"
+          name="tab-toggle"
+          id="tab1"
+          checked
+        />
+        <input type="radio" class="tab-toggle" name="tab-toggle" id="tab2" />
+        <input type="radio" class="tab-toggle" name="tab-toggle" id="tab3" />
+        <input type="radio" class="tab-toggle" name="tab-toggle" id="tab4" />
+
+        <ul class="tab-list">
+          <li class="tab-item">
+            <label class="tab-trigger text-pink" for="tab1">BENEFITS</label>
+          </li>
+          <li class="tab-item">
+            <label class="tab-trigger text-pink" for="tab2">INGREDIENTEN</label>
+          </li>
+          <li class="tab-item">
+            <label class="tab-trigger text-pink" for="tab3">GEBRUIK</label>
+          </li>
+          <li class="tab-item">
+            <label class="tab-trigger text-pink" for="tab4">VOORZORGSMAATREGELEN VOOR GEBRUIK</label>
+          </li>
+        </ul>
+
+        <div class="tab-container">
+          <div class="tab-content">
+            <div>
+              Alles wat je nodig hebt om mooier en langer haar te krijgen, in één woord subliem!
+              <ul>
+                <li>
+                  ✓ Bevordert de groei en onderhoudt de conditie van het haar,
+                </li>
+
+                <li>
+                  ✓ Bevordert de schoonheid en groei van het haar,
+                </li>
+
+                <li>
+                  ✓ Helpt haarbreuk aanzienlijk te verminderen,
+                </li>
+
+                <li>
+                  ✓ Helpt het aantal verdubbelde (gespleten) haren aanzienlijk te verminderen,
+                  Helpt het volume van het haar aanzienlijk te verbeteren,
+                  
+                </li>
+
+                <li>
+                  ✓ Helpt om normaal haar te behouden dankzij zink, Biotine en Keratine,
+                </li>
+
+                <li>
+                  ✓ Geschikt voor alle haartypes.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div>
+              Een unieke formule met essentiële vitaminen en mineralen voor uw haar:
+              see the attachment photo sent separately:suplement facts.
+            </div>
+          </div>
+          <div class="tab-content">
+            <div>
+              Neem 2 gummies per dag wanneer je maar wilt. Genoeg voor 30 dagen  (flesje van 1 maand). Er zijn 60 gummies per flesje. De haar vitamine kan resultaten geven vanaf de eerste maand. Voor langdurige resultaten raden wij minimaal 3 maanden gebruiken aan. Resultaten zullen verschillen van persoon tot persoon.
+            </div>
+          </div>
+          <div class="tab-content">
+            <div>
+              Zwangere vrouwen, vrouwen die zwanger willen worden of vrouwen die borstvoeding geven dienen hun arts, verloskundige of apotheker te raadplegen alvorens dit voedingssupplement in te nemen. Niet aanbevolen voor kinderen jonger dan 12 jaar of voor mensen met schildklieraandoeningen. Voedingssupplementen dienen te worden gebruikt als onderdeel van een gezonde levensstijl en niet als vervanging van een gevarieerde en evenwichtige voeding. Bewaren bij kamertemperatuur op een schone en droge plaats. Buiten het bereik van jonge kinderen houden. De aanbevolen dagelijkse dosis niet overschrijden.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

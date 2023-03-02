@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Multi Column</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary__color: #35a8bb;
+        --opaque: #dff1f4;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 1080px;
+      }
+
+      .flex__info__characteristic {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 30px 0px;
+        box-shadow: 0px -5px 20px -5px rgba(0, 0, 0, 0.07);
+      }
+
+      .info__characteristic {
+        width: 25%;
+        text-align: center;
+        padding: 10px;
+        margin: 15px 0;
+      }
+
+      .info__characteristic > i {
+        display: block;
+        font-size: 40px;
+        color: var(--primary__color);
+      }
+
+      .info__characteristic > h3 {
+        margin: 1em;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .info__characteristic {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="flex__info__characteristic">
+        <div class="info__characteristic">
+          <i class="fa-solid fa-truck-fast"></i>
+          <h3>Vandaag Besteld Morgen Thuis!</h3>
+          <p>Gratis levering in heel Nederland en België.</p>
+        </div>
+
+        <div class="info__characteristic">
+          <i class="fa-solid fa-credit-card"></i>
+          <h3>Veilige Betaling</h3>
+          <p>Visa, Mastercard, Ideal, Apple pay, Paypal</p>
+        </div>
+
+        <div class="info__characteristic">
+          <i class="fa-solid fa-box"></i>
+          <h3>Retourneren & Ruilen</h3>
+          <p>Koop met vertrouwen, u kunt van gedachten veranderen!</p>
+        </div>
+
+        <div class="info__characteristic">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Klantenservice</h3>
+          <p>Onze consultants staan tot uw dienst</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

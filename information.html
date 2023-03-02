@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Information</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .info__wrapper {
+        padding: 20px;
+        background-color: #fff3f3;
+      }
+
+      .info__wrapper h1 {
+        text-align: center;
+        color: #ff7f87;
+      }
+
+      .flex__info__product {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .product__info {
+        width: 25%;
+        text-align: center;
+        padding: 10px;
+        margin: 15px 0;
+      }
+
+      .icon {
+        text-align: center;
+      }
+
+      .info__image {
+        width: 100%;
+        max-width: 150px;
+      }
+
+      .icon__title {
+        font-size: 17px;
+        font-weight: 200;
+        margin-top: 10px;
+      }
+
+      .product__info > p {
+        margin-top: 10px;
+        line-height: 1.8em;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .flex__info__product {
+          flex-direction: column;
+        }
+        .product__info {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info__wrapper">
+      <h1>WANNEER ZAL IK DE VERANDERING OPMERKEN?</h1>
+      <div class="flex__info__product">
+        <div class="product__info">
+          <div class="icon">
+            <img
+              class="info__image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/info-1.png?v=1677262139"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">20 DAGEN</h1>
+          <p>
+            Uw haar is meer gehydrateerd, glanzend en de baby haartjes beginnen
+            meer tot leven te komen. Dit is nog maar het begin!
+          </p>
+        </div>
+
+        <div class="product__info">
+          <div class="icon">
+            <img
+              class="info__image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/info-2.png?v=1677262139"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">1 MAAND</h1>
+          <p>
+            Uw haar begint stukje sneller te groeien en het ziet er steeds wat
+            beter uit.
+          </p>
+        </div>
+
+        <div class="product__info">
+          <div class="icon">
+            <img
+              class="info__image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/info-3.png?v=1677262139"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">2 MAANDEN</h1>
+          <p>
+            De optimale groeisnelheid is bereikt en uw haar ziet er steeds beter
+            uit.we gaan door en geven niet op!
+          </p>
+        </div>
+
+        <div class="product__info">
+          <div class="icon">
+            <img
+              class="info__image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/info-4.png?v=1677262139"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">3 MAANDEN EN MEER</h1>
+          <p>
+            De conditie van uw haar stabiliseert en het blijft groeien aan een
+            optimale snelheid. De maanden erna zult u zien dat het proces zich
+            versnelt want nu gebruikt u hem 2 a 3 maanden consistent.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video__div">
+      <video autoplay loop playsinline width="100%" min-height="0">
+        <source
+          src="https://cdn.shopify.com/videos/c/o/v/8584bf2b4b1d4a959fd665e596ad5a0c.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Testimonial Template</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary__color: #35a8bb;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .testimonial__wrapper {
+        width: 100%;
+        max-width: 1080px;
+        display: flex;
+        align-items: stretch;
+        justify-content: start;
+        flex-wrap: wrap;
+        padding: 50px 0px;
+      }
+
+      .testimonial__item {
+        flex-basis: 23%;
+        padding: 15px;
+        margin: 20px 5px;
+        box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.11);
+      }
+
+      .review__pic {
+        width: 100%;
+        max-width: 350px;
+        aspect-ratio: 9 / 16;
+        margin-bottom: 15px;
+      }
+
+      .person__name {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .person__name i {
+        color: var(--primary__color);
+      }
+
+      .review__date {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      .review__star {
+        margin: 10px 0px;
+        color: var(--primary__color);
+      }
+
+      .review {
+        font-size: 17px;
+        line-height: 1.3em;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .testimonial__item {
+          flex-basis: 45%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="testimonial__wrapper">
+        <!-- Item 1 -->
+
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Cecile A. <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">31/01/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Pour l instant je n arrive pas à juger de l efficacité, je vais
+            reprendre une cure, mais le goût est super et je suis quand même
+            moins fatiguée!
+          </p>
+        </div>
+
+        <!-- Item 2 -->
+
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Mr. Saz <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">25/03/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad pariatur
+            tenetur delectus! Et fugiat saepe animi mollitia consequatur
+            pariatur modi aperiam nesciunt? Placeat laudantium tenetur dicta
+            molestias, quis debitis fuga ipsa nemo, voluptatem officiis
+            provident expedita nisi quas ex. Velit mollitia numquam maxime
+            voluptate consectetur tempora corrupti beatae laudantium harum.
+          </p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Cecile A. <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">31/01/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Pour l instant je n arrive pas à juger de l efficacité, je vais
+            reprendre une cure, mais le goût est super et je suis quand même
+            moins fatiguée!
+          </p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Cecile A. <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">31/01/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Pour l instant je n arrive pas à juger de l efficacité, je vais
+            reprendre une cure, mais le goût est super et je suis quand même
+            moins fatiguée!
+          </p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Cecile A. <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">31/01/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Pour l instant je n arrive pas à juger de l efficacité, je vais
+            reprendre une cure, mais le goût est super et je suis quand même
+            moins fatiguée!
+          </p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Cecile A. <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">31/01/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Pour l instant je n arrive pas à juger de l efficacité, je vais
+            reprendre une cure, mais le goût est super et je suis quand même
+            moins fatiguée!
+          </p>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Cecile A. <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">31/01/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Pour l instant je n arrive pas à juger de l efficacité, je vais
+            reprendre une cure, mais le goût est super et je suis quand même
+            moins fatiguée!
+          </p>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Cecile A. <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">31/01/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Pour l instant je n arrive pas à juger de l efficacité, je vais
+            reprendre une cure, mais le goût est super et je suis quand même
+            moins fatiguée!
+          </p>
+        </div>
+
+        <!-- Item 8 -->
+
+        <div class="testimonial__item">
+          <img
+            class="review__pic"
+            src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/testi_pic.jpg?v=1677391355"
+            alt=""
+          />
+          <h3 class="person__name">
+            Mr. Saz <i class="fa-solid fa-circle-check"></i>
+          </h3>
+          <p class="review__date">25/03/2023</p>
+          <p class="review__star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </p>
+          <p class="review">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad pariatur
+            tenetur delectus! Et fugiat saepe animi mollitia consequatur
+            pariatur modi aperiam nesciunt? Placeat laudantium tenetur dicta
+            molestias, quis debitis fuga ipsa nemo, voluptatem officiis
+            provident expedita nisi quas ex. Velit mollitia numquam maxime
+            voluptate consectetur tempora corrupti beatae laudantium harum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

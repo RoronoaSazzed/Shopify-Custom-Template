@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Box</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .list__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        line-break: anywhere;
+        hyphens: auto;
+      }
+
+      .list__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        border-bottom: 2px solid white;
+      }
+
+      .list__title {
+        flex: 1;
+        padding: 15px;
+        text-transform: capitalize;
+        background-color: #f3f7ec;
+      }
+
+      .list__description {
+        flex: 3;
+        padding: 15px;
+        background-color: #d1e3ad;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list__box">
+      <div class="list__wrapper">
+        <!-- List 1 -->
+        <div class="list__item">
+          <div class="list__title">EU gecertificeerd</div>
+
+          <div class="list__description">Zeker ,100% gecertificeerd</div>
+        </div>
+        <!-- List 2 -->
+        <div class="list__item">
+          <div class="list__title">Natuurlijke smaakstoffen</div>
+
+          <div class="list__description">
+            Zeker, de smaakstoffen zijn afkomstig van de soorten fruiten.
+          </div>
+        </div>
+        <!-- List 3 -->
+        <div class="list__item">
+          <div class="list__title">Natuurlijke ingrediënten</div>
+
+          <div class="list__description">
+            Zeker, alles is van 100% natuurlijke ingrediënten.
+          </div>
+        </div>
+        <!-- List 4 -->
+        <div class="list__item">
+          <div class="list__title">Natuurlijke kleurstoffen</div>
+
+          <div class="list__description">
+            Zeker, de kleurstoffen zijn afkomstig van natuurlijke groentes en
+            fruiten.
+          </div>
+        </div>
+        <!-- List 5 -->
+        <div class="list__item">
+          <div class="list__title">Eco verpakking</div>
+
+          <div class="list__description">
+            Zeker, de verpakkingen zijn afkomstig van gerecycled plastic.
+          </div>
+        </div>
+        <!-- List 6 -->
+        <div class="list__item">
+          <div class="list__title">Smaak</div>
+
+          <div class="list__description">
+            Overheerlijke blauwebessen smaak waar je niet genoegen aan 2 stuks
+            krijgt.
+          </div>
+        </div>
+        <!-- List 7 -->
+        <div class="list__item">
+          <div class="list__title">Halal</div>
+
+          <div class="list__description">Zeker,100% gecertificeerd</div>
+        </div>
+        <!-- List 8 -->
+        <div class="list__item">
+          <div class="list__title">Cruelty free</div>
+
+          <div class="list__description">
+            Zeker, 100% product is niet op dieren getest tijdens het
+            ontwikkelingsproces.
+          </div>
+        </div>
+        <!-- List 9 -->
+        <div class="list__item">
+          <div class="list__title">Vegan</div>
+
+          <div class="list__description">
+            zeker, we gebruiken de bindmiddel pectine is een natuurlijke
+            voorkomend polysacharide dat wordt gewonnen uit fruit, zoals appels
+            en citrusvruchten.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .menu {
+        width: 100%;
+        max-width: 1080px;
+      }
+
+      html,
+      body {
+        background: #a9e1fa;
+        height: 100%;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .menu__link {
+        display: inline-block;
+        color: #2d6c90;
+        text-decoration: none;
+        position: relative;
+        padding: 14px 0;
+        font-family: "Muli", sans-serif;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 1;
+        letter-spacing: 0.04em;
+      }
+
+      .menu__link svg {
+        fill: none;
+        stroke: #70aec9;
+        stroke-width: 1;
+        stroke-miterlimit: 10;
+        stroke-dasharray: 338;
+        stroke-dashoffset: 338;
+        stroke-linecap: round;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% + 60px);
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: stroke-dashoffset 0s 0.2s, opacity 0.2s;
+        z-index: -1;
+      }
+
+      .menu__link:hover svg {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transition: opacity 0s,
+          stroke-dashoffset 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="menu">
+        <a href="#" class="menu__link">
+          Home
+
+          <svg
+            width="100%"
+            min-height="0"
+            viewBox="0 0 102 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="mark"
+              d="M101.25 24C96.25 7.25 81.2828 0.5 50.75 0.5C20.2172 0.5 1 7.85608 1 21.25C1 33.2895 22.1956 38.5 56 38.5C87.4415 38.5 99 24 93.5 4.75"
+            />
+          </svg> </a
+        ><br />
+        <a href="#" class="menu__link">
+          About
+
+          <svg
+            width="100%"
+            min-height="0"
+            viewBox="0 0 102 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="mark"
+              d="M101.25 24C96.25 7.25 81.2828 0.5 50.75 0.5C20.2172 0.5 1 7.85608 1 21.25C1 33.2895 22.1956 38.5 56 38.5C87.4415 38.5 99 24 93.5 4.75"
+            />
+          </svg> </a
+        ><br />
+        <a href="#" class="menu__link">
+          Projects
+
+          <svg
+            width="100%"
+            min-height="0"
+            viewBox="0 0 102 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="mark"
+              d="M101.25 24C96.25 7.25 81.2828 0.5 50.75 0.5C20.2172 0.5 1 7.85608 1 21.25C1 33.2895 22.1956 38.5 56 38.5C87.4415 38.5 99 24 93.5 4.75"
+            />
+          </svg> </a
+        ><br />
+        <a href="#" class="menu__link">
+          Contact
+
+          <svg
+            width="100%"
+            min-height="0"
+            viewBox="0 0 102 39"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="mark"
+              d="M101.25 24C96.25 7.25 81.2828 0.5 50.75 0.5C20.2172 0.5 1 7.85608 1 21.25C1 33.2895 22.1956 38.5 56 38.5C87.4415 38.5 99 24 93.5 4.75"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

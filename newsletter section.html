@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter Section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .newsletter__section {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: #35a8bb;
+      }
+
+      .newsletter__img,
+      .newsletter__text {
+        flex: 1;
+      }
+
+      .newsletter__img img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .newsletter__text {
+        display: grid;
+        place-items: center;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .newsletter__section h3,
+      .newsletter__section p {
+        margin: 15px 0px;
+      }
+
+      .contact__redirect__button {
+        display: inline-block;
+        background-color: #121212;
+        padding: 15px 25px;
+        color: white;
+        text-decoration: none;
+        margin: 15px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="newsletter__section">
+        <div class="newsletter__img">
+          <img src="hair happy.jpg" alt="" />
+        </div>
+
+        <div class="newsletter__text">
+          <div>
+            <h3>NIEUWSBRIEF HEALTHYBOMBS</h3>
+            <p>
+              Ontvang ons nieuws, promoties, persoonlijk advies... als eerste.
+
+              <br />Schrijf u nu in en ontvang 10% korting op uw eerste
+              bestelling!
+            </p>
+            <a
+              class="contact__redirect__button"
+              href="https://healthybombs.nl/pages/contact"
+              >voer hier uw email in</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

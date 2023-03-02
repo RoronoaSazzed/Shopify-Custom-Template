@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 1080px;
+      }
+
+      #left {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      #right {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      @keyframes left__eyebrows {
+        100% {
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="wrapper">
+        <svg
+          width="50%"
+          min-height="0"
+          viewBox="0 0 320 296"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="step-1">
+            <path
+              id="outline"
+              d="M187.09 11.89H132.3C65.6337 11.89 11.59 65.9337 11.59 132.6V163.32C11.59 229.986 65.6337 284.03 132.3 284.03H187.09C253.756 284.03 307.8 229.986 307.8 163.32V132.6C307.8 65.9337 253.756 11.89 187.09 11.89Z"
+              fill="white"
+              stroke="#3271FC"
+              stroke-width="23"
+              stroke-miterlimit="10"
+            />
+            <path
+              id="nose"
+              d="M162.08 222.45C170.762 222.45 177.8 215.412 177.8 206.73C177.8 198.048 170.762 191.01 162.08 191.01C153.398 191.01 146.36 198.048 146.36 206.73C146.36 215.412 153.398 222.45 162.08 222.45Z"
+              fill="#008CFF"
+            />
+            <path
+              id="left"
+              d="M129.423 17.4984L129.423 176.544C140.525 171.884 148.32 160.925 148.32 148.127L148.32 45.9157C148.32 33.1179 140.525 22.1586 129.423 17.4984Z"
+              fill="#3271FC"
+            />
+            <path
+              id="right"
+              d="M196.95 17.4984L196.95 176.544C185.848 171.884 178.052 160.925 178.052 148.127L178.052 45.9157C178.052 33.1179 185.848 22.1586 196.95 17.4984Z"
+              fill="#3271FC"
+            />
+            <circle
+              id="right-eye"
+              cx="232.81"
+              cy="159.08"
+              r="45.1901"
+              stroke="#3271FC"
+              stroke-width="19"
+            />
+            <circle
+              id="left-eye"
+              cx="93.3"
+              cy="159.08"
+              r="45.1901"
+              stroke="#3271FC"
+              stroke-width="19"
+            />
+          </g>
+        </svg>
+
+        <script>
+          const introText = document.querySelectorAll("#eye-brows path");
+
+          for (let i = 0; i < introText.length; i++) {
+            console.log(`letter ${i} is ${introText[i].getTotalLength()}`);
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

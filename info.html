@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Information Section</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .flex__info {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .info {
+        width: 25%;
+        text-align: center;
+        padding: 10px;
+        margin: 15px 0;
+      }
+
+      .icon {
+        text-align: center;
+      }
+
+      .image {
+        width: 100%;
+        max-width: 50px;
+      }
+
+      .icon__title {
+        font-size: 17px;
+        font-weight: 200;
+        margin-top: 10px;
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .info {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="flex__info">
+        <div class="info">
+          <div class="icon">
+            <img
+              class="image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/ble_80x_d1fe48ad-d0e9-4f05-afcd-f7c7f727057b_256x256_crop_center.png?v=1676825050"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">Glutenvrij</h1>
+        </div>
+
+        <div class="info">
+          <div class="icon">
+            <img
+              class="image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/feuille_80x_882b79a0-5ac6-4162-b64f-9a4c34296751_256x256_crop_center.png?v=1676825372"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">100% Vegan</h1>
+        </div>
+
+        <div class="info">
+          <div class="icon">
+            <img
+              class="image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/goutte_80x_e8c372ff-b3b8-4926-8dc3-57d65f74d1ed_256x256_crop_center.png?v=1676825391"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">0 Kleurstof Kunstmatig</h1>
+        </div>
+
+        <div class="info">
+          <div class="icon">
+            <img
+              class="image"
+              src="https://cdn.shopify.com/s/files/1/0616/8870/9291/files/colo_80x_19ce9d87-d089-4802-b389-eaa0f750f446_256x256_crop_center.png?v=1676825400"
+              alt=""
+            />
+          </div>
+          <h1 class="icon__title">Recyclebare Fles</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
